@@ -124,8 +124,10 @@
       }
       function btnEnable(email) {
         var submit = document.getElementById('submit');
+        var emailvalue = email.value;
+        var test = emailvalue.includes('@');
 
-        if (email.value.trim() != '') {
+        if (test === true) {
           submit.disabled = false;
           reset.disabled = false;
         } else {
